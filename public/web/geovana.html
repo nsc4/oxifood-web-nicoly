@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5065/5065171.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <style>
+        body {
+            background-image: url("https://www.sciencefriday.com/wp-content/uploads/2022/04/pitbull-illustration.jpg");
+            background-size: cover;
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            cursor: pointer;
+            box-shadow: 3px 3px 5px 0px #000;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <title>Atividade</title>
+</head>
+
+<body>
+    <button type="button" class="btn btn-outline-light btn-lg" onclick="atv1()">Atividade 1</button>
+    <button type="button" class="btn btn-outline-light btn-lg" onclick="atv2()">Atividade 2</button>
+    <button type="button" class="btn btn-outline-light btn-lg" onclick="atv3()">Atividade 3</button>
+    <button type="button" class="btn btn-outline-light btn-lg" onclick="atv4()">Atividade 4</button>
+    <script>
+        function atv1() {
+            //Questão A    
+
+            let numero = Number(prompt("Digite um número:"));
+
+            let mensagem = `Número: ${numero}\nAntecessor: ${numero - 1}\nSucessor: ${numero + 1}`;
+            exibirMensagem(mensagem);
+        }
+        function atv2() {    //Questão B    
+            let valor = Number(prompt("Digite o valor do jantar:"));
+            let clientes = Number(prompt("Qual a quantidade de clientes?"));
+            let total = (valor / clientes).toFixed(2);
+
+            let mensagem = `O valor do jantar foi: R$${valor.toFixed(2)}\nNúmero de clientes: ${clientes}\nValor por cliente: R$${total}`;
+            exibirMensagem(mensagem);
+        }
+        function atv3() {    //Questão C    
+            let produto = Number(prompt("Qual o valor de um sapato?"));
+            let vista = (produto - produto * 0.1).toFixed(2);
+            let dividido = (produto / 3).toFixed(2);
+
+            let mensagem = `O valor do sapato é: R$${produto.toFixed(2)}\nÀ vista: R$${vista}\nOu em 3x de: R$${dividido}`;
+            exibirMensagem(mensagem);
+        }
+        function atv4() {    //Questão D    
+            let nota1 = Number(prompt("Digite sua primeira nota:"));
+            let nota2 = Number(prompt("Digite sua segunda nota:"));
+            let media = ((nota1 + nota2) / 2).toFixed(1);
+
+            let mensagem = `1ª nota: ${nota1.toFixed(1)}\n2ª nota: ${nota2.toFixed(1)}\nMédia: ${media}`;
+            exibirMensagem(mensagem);
+        }
+        function exibirMensagem(mensagem) { if (navigator.onLine) { lert(mensagem); } else { alert(mensagem); } }  </script>
+
+</body>
+
+</html>

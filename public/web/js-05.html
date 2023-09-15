@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-05 - integração com html</title>
+</head>
+<body>
+    <header><h1>Programa Olá</h1></header><nh/>
+    <input type="text" id="inNome" placeholder="Digite seu nome:"/>
+    <input type="button" name="" id="btnExibir" value="Exibir nome"/>
+    <p id="resposta"></p>
+    <script>
+        function exibirNome(){
+            let nome = document.getElementById("inNome").value;
+            console.log(nome);
+            document.getElementById("resposta").textContent = "Olá, "+nome+"!";
+
+        }
+    </script>
+</body>
+</html>
