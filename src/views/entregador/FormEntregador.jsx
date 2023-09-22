@@ -1,13 +1,14 @@
 import React from "react";
 import InputMask from 'react-input-mask';
+import { Link } from "react-router-dom";
 import { Button, Container, Divider, Form, Icon } from 'semantic-ui-react';
-
+import MenuSistema from '../../MenuSistemas';
 export default function FormCliente () {
 
     return (
 
         <div>
-
+<MenuSistema/> 
             <div style={{marginTop: '3%'}}>
 
                 <Container textAlign='justified' >
@@ -94,8 +95,9 @@ export default function FormCliente () {
                                 labelPosition='left'
                                 color='orange'
                             >
-                                <Icon name='reply' />
-                                Voltar
+                                <Icon name='reply' /> 
+                             
+                                <Link to={'/list-cliente'}>Voltar</Link>
                             </Button>
                                 
                             <Button
